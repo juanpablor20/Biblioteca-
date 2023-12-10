@@ -1,0 +1,12 @@
+.heart-rating input[type="radio"] {
+    display: none;
+  }
+
+  .heart-rating label {
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .heart-rating input[type="radio"]:checked+label {
+    color: var(--tw-color-heart);
+  }

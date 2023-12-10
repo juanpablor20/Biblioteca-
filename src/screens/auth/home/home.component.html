@@ -1,0 +1,54 @@
+<app-header/>
+
+<!-- Contenido principal -->
+<main class="flex justify-center items-center">
+    <h1 class="text-3xl text-center">Bienvenido A Pequi</h1>
+</main>
+
+<!-- Navegación inferior -->
+<div class="bottomNav fixed bottom-0 w-full">
+    <nav style="border:1px solid blue" class="md:hidden bottom-0 w-full bg-gray-700 text-xs">
+        <ul class="flex justify-around items-center text-white text-center opacity-75 text-lg font-bold">
+            <li class="p-4 hover:bg-gray-500">
+                <a href="#">
+                    <span>Link 1</span>
+                    <svg class="h-6 w-6 fill-current mx-auto" viewBox="0 0 20 20">
+                       
+                    </svg>
+                </a>
+            </li>
+            <!-- Agrega más enlaces según sea necesario -->
+
+        </ul>
+    </nav>
+</div>
+<!-- 
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white rounded-lg shadow-lg p-8 w-96">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">Registrar Prestamo</h2>
+            <button>&times;</button>
+        </div>
+        <p class="text-sm text-gray-600 mb-6">Registra el prestamo del equipo antes de entregar</p>
+
+        <form [formGroup]="prestamoForm" (ngSubmit)="onSubmit()">
+            <label for="cantidad">Opción:</label>
+            <select formControlName="cantidad" (change)="onChangeOpcion()">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div *ngFor="let comp of compArray.controls; let i = index">
+                <div [formGroupName]="i">
+                    <label [for]="'computadora' + i">Computadora {{ i + 1 }}:</label>
+                    <input [id]="'computadora' + i" [formControl]="i" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+-->
