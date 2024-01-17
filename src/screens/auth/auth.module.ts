@@ -10,7 +10,6 @@ import { HistorialComponent } from './historial/historial.component';
   declarations: [
   ],
   imports: [
-    CommonModule,
     RouterModule.forChild([
       { path: 'home', component: HomeComponent, canActivate: [authGuard] },
       { path: 'devoluciones', component: DevolucionesComponent, canActivate: [authGuard] },

@@ -16,35 +16,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-  prestamoForm!: FormGroup;
-  miFormulario!: FormGroup;
+export class HomeComponent {
 
-  constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.prestamoForm = this.fb.group({
-      cantidad: ['', Validators.required],
-      computadoras: this.fb.array([]),
-
-    });
-  }
-
-  get compArray() {
-    return this.prestamoForm.controls["computadoras"] as FormArray;
-  }
-
-  onChangeOpcion() {
-    const cantidad = this.miFormulario.get('cantidad')?.value || 0;
-    const computadorasFormArray = this.fb.array([]);
-
-    for (let i = 0; i < cantidad; i++) {
-      computadorasFormArray.push(this.fb.control('', Validators.required));
-    }
-    this.miFormulario.setControl('computadoras', computadorasFormArray);
-  }
-
-  onSubmit() {
-    console.log(this.prestamoForm.value);
-  }
 }
