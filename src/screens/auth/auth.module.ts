@@ -5,6 +5,8 @@ import { authGuard } from '../../guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { DevolucionesComponent } from './devoluciones/devoluciones.component';
 import { HistorialComponent } from './historial/historial.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EquiposComponent } from './equipos/equipos.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,8 @@ import { HistorialComponent } from './historial/historial.component';
       { path: 'home', component: HomeComponent, canActivate: [authGuard] },
       { path: 'devoluciones', component: DevolucionesComponent, canActivate: [authGuard] },
       { path: 'historial', component: HistorialComponent, canActivate: [authGuard] },
-
+      { path: 'equipos', component:EquiposComponent, canActivate:[authGuard] }
     ]),
   ],
-  })
+})
 export class AuthModule { }
